@@ -12,9 +12,29 @@ export default [
     "REV'N Web Feed Schedule",
     "REV'N Web Feed Schedule"
   ],
-  ['2'],
+  [
+    '2',
+    "REV'N Web Feed Schedule",
+    "REV'N Web Feed Schedule",
+    "REV'N Web Feed Schedule",
+    "REV'N Web Feed Schedule",
+    "REV'N Web Feed Schedule",
+    "REV'N Web Feed Schedule",
+    "REV'N Web Feed Schedule",
+    "REV'N Web Feed Schedule",
+    "REV'N Web Feed Schedule"
+  ],
   [
     '3',
+    "REV'N Web Feed Schedule",
+    "REV'N Web Feed Schedule",
+    "REV'N Web Feed Schedule",
+    "REV'N Web Feed Schedule",
+    "REV'N Web Feed Schedule",
+    "REV'N Web Feed Schedule",
+    "REV'N Web Feed Schedule",
+    "REV'N Web Feed Schedule",
+    "REV'N Web Feed Schedule",
     "REV'N Web Feed Schedule",
     'All times Eastern / Effective September 26, 2022',
     'All times Eastern / Effective September 26, 2022',
@@ -56,6 +76,7 @@ export default [
     'Outlaw Truck and Tractor',
     'Inside Drag Racing',
     'Inside Drag Racing',
+    'The American Car Prospector',
     'The American Car Prospector',
     'Inside Drag Racing',
     'Inside Drag Racing',
@@ -198,11 +219,14 @@ export default [
     '18',
     '6:30 AM',
     'The Amazing World of Automobiles',
+    'The Amazing World of Automobiles',
     'Car Guy Show; The',
     'Hooked On Dirt',
     'The American Car Prospector',
+    'The American Car Prospector',
     "Boats n' Bikes",
-    '6:30 AM'
+    '6:30 AM',
+    'Flying Through Time'
   ],
   [
     '19',
@@ -212,8 +236,10 @@ export default [
     'Motorhead Garage',
     '1000cc Raw Thrill',
     'Flying Through Time',
+    'Flying Through Time',
     'Racing Through Time',
     'Pleasure Boater',
+    "Trippin' on Two Wheels",
     "Trippin' on Two Wheels",
     'Intrepid Powerboats On the Water',
     '7:00 AM'
@@ -225,6 +251,7 @@ export default [
     'Motorz',
     'Tech Garage',
     'Lokar Car Show',
+    'Racing Through Time',
     'Racing Through Time',
     'Intrepid Powerboats On the Water',
     'Bidding Wars',
@@ -250,6 +277,7 @@ export default [
     'Car Files',
     'Car Files',
     'Car Files',
+    'The American Car Prospector',
     'The American Car Prospector',
     "Sam's Garage",
     '8:30 AM'
@@ -347,6 +375,7 @@ export default [
     'Dream Car Garage',
     'Dream Car Garage',
     'American Car Prospector; The',
+    'American Car Prospector; The',
     'Kits-N-Cruisin',
     '12:30 PM'
   ],
@@ -391,6 +420,7 @@ export default [
     '2:30 PM',
     'Lund International Truck and Jeep Show',
     'Hooked On Dirt',
+    'The Amazing World of Automobiles',
     'The Amazing World of Automobiles',
     "America's 4 X 4 Invasion",
     'Brand New Musicle Car: Yenko Camero',
@@ -466,8 +496,10 @@ export default [
     'Dream Car Garage',
     'Pleasure Boater',
     'Flying Through Time',
+    'Flying Through Time',
     'My Classic Car',
-    '5:30 PM'
+    '5:30 PM',
+    'Racing Through Time'
   ],
   [
     '41',
@@ -479,6 +511,7 @@ export default [
     'Racing Through Time',
     "Sam's Garage",
     'Racing Through Time',
+    'Racing Through Time',
     'Flying Through Time',
     '6:00 PM'
   ],
@@ -486,11 +519,14 @@ export default [
     '42',
     '6:30 PM',
     'The Amazing World of Automobiles',
+    'The Amazing World of Automobiles',
     'Classic Cars',
     'Hooked On Dirt',
     'On Two Wheels',
+    'On Two Wheels',
     'Men & Motors Showcase',
     'Flying Through Time',
+    'Racing Through Time',
     'Racing Through Time',
     '6:30 PM'
   ],
@@ -513,6 +549,7 @@ export default [
     'Motorz',
     'Tech Garage',
     "America's 4 X 4 Invasion",
+    '400 Thunder Premium Races',
     '400 Thunder Premium Races',
     'Intrepid Powerboats On the Water',
     'Hot Rod Madness',
@@ -558,12 +595,14 @@ export default [
     '48',
     '9:30 PM',
     'American Car Prospector; The',
+    'American Car Prospector; The',
     'Pit Stop',
     'Kits-N-Cruisin',
     'OPGI American Classics',
     'Classic Cars',
     "Sam's Garage",
-    '9:30 PM'
+    '9:30 PM',
+    '400 Thunder Premium Races'
   ],
   [
     '49',
@@ -575,6 +614,7 @@ export default [
     'Hot Rod Madness',
     'The Car Guy Show',
     '400 Thunder Premium Races',
+    '400 Thunder Premium Races',
     'Performance TV',
     '10:00 PM'
   ],
@@ -582,6 +622,7 @@ export default [
     '50',
     '10:30 PM',
     'Hooked On Dirt',
+    '400 Thunder Premium Races',
     '400 Thunder Premium Races',
     'Tech Garage',
     "America's 4 X 4 Invasion",

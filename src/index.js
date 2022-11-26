@@ -27,13 +27,21 @@ export function parse(html) {
         rowArray.push(content)
       }
 
+      if (nextRow[j + 1] && nextRow[j + 1].rowspan > 0) {
+        for (let n = 0; n < nextRow[j + 1].colspan; n++) {
+          rowArray.push(nextRow[j + 1].content)
+        }
+      }
+
       let rowspan = $(cell).attr('rowspan')
       rowspan = rowspan ? parseInt(rowspan) - 1 : 0
-      if (rowspan > 0) nextRow[j] = { content, rowspan }
+      if (rowspan > 0) nextRow[j] = { content, rowspan, colspan: colspan + 1 }
     })
 
     tableArray.push(rowArray)
   })
+
+  console.log(tableArray)
 
   return tableArray
 }

@@ -6,7 +6,7 @@ export default [
     'Superlift Off-Road Adventures',
     'Superlift Off-Road Adventures',
     'The American Car Prospector',
-    'Dream Ridez'
+    'The American Car Prospector'
   ],
   [
     'Car Files',
@@ -15,6 +15,6 @@ export default [
     'Car Files',
     'Car Files',
     'The American Car Prospector',
-    "Sam's Garage"
+    'The American Car Prospector'
   ]
 ]
