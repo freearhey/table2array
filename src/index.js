@@ -6,7 +6,8 @@ export function parse(html) {
   let tableArray = []
   let rowspans = []
 
-  $('tr').each(function (i, row) {
+  const rows = $('tr')
+  rows.each((i, row) => {
     const rowArray = []
 
     // Add content from rowspans
@@ -24,30 +25,38 @@ export function parse(html) {
       const $cell = $(cell)
 
       // Apply rowspans offsets
-      let aux = j
-      j = 0
+      let kbuf = j
+      let k = 0
       do {
-        while (rowspans[j]) j++
-        while (aux && !rowspans[j]) {
-          j++
-          aux--
+        while (rowspans[k]) k++
+        while (kbuf && !rowspans[k]) {
+          k++
+          kbuf--
         }
-      } while (aux)
+      } while (kbuf)
 
       const content = $cell.html().trim()
-
       rowArray.push(content)
 
       // Check rowspan
-      const cellRowspan = $cell.attr('rowspan')
-      const value = cellRowspan ? parseInt(cellRowspan, 10) - 1 : 0
-      if (value > 0) nextrowspans[j] = { content, value }
+      let cellRowspan = $cell.attr('rowspan')
+      cellRowspan = cellRowspan ? parseInt(cellRowspan, 10) - 1 : 0
+      if (cellRowspan > 0) nextrowspans[j] = { content, value: cellRowspan }
+
+      // Check colspan
+      let cellColspan = $cell.attr('colspan')
+      cellColspan = cellColspan ? parseInt(cellColspan, 10) - 1 : 0
+      for (let x = 0; x < cellColspan; x++) {
+        rowArray.push(content)
+      }
     })
 
     rowspans = nextrowspans
     rowspans.forEach((rowspan, index) => {
       if (rowspan && rowspan.value === 0) rowspans[index] = null
     })
+
+    // console.log(rowspans)
 
     tableArray.push(rowArray)
   })

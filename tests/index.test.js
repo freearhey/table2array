@@ -23,6 +23,13 @@ it('parse table with colspan', async () => {
   expect(parser.parse(input)).toEqual(expected)
 })
 
+fit('parse table with colspan and rowspan', async () => {
+  const input = content('tests/__data__/input/multispan.html')
+  const { default: expected } = await import('./__data__/expected/multispan.js')
+
+  expect(parser.parse(input)).toEqual(expected)
+})
+
 function content(filepath) {
   return fs.readFileSync(path.resolve(filepath), {
     encoding: 'utf8'
