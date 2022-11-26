@@ -51,7 +51,7 @@ Output:
 
 ### Table with rowspan
 
-<table border="1">
+<table>
   <thead>
     <tr>
       <th>Parent</th>
