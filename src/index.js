@@ -4,7 +4,6 @@ export function parse(html) {
   const $ = cheerio.load(html)
 
   let tableArray = []
-
   let rowspans = []
 
   $('tr').each(function (i, row) {
