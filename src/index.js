@@ -31,6 +31,7 @@ export function parse(html) {
         for (let n = 0; n < nextRow[j + 1].colspan; n++) {
           rowArray.push(nextRow[j + 1].content)
         }
+        nextRow[j + 1].rowspan--
       }
 
       let rowspan = $(cell).attr('rowspan')
@@ -40,8 +41,6 @@ export function parse(html) {
 
     tableArray.push(rowArray)
   })
-
-  // console.log(tableArray)
 
   return tableArray
 }
