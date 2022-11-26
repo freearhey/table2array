@@ -23,9 +23,9 @@ it('parse table with rowspan', async () => {
   expect(table2array(input)).toEqual(expected)
 })
 
-it('parse table with colspan and rowspan', async () => {
-  const input = content('tests/__data__/input/multispan.html')
-  const { default: expected } = await import('./__data__/expected/multispan.js')
+it('parse complex table', async () => {
+  const input = content('tests/__data__/input/complex.html')
+  const { default: expected } = await import('./__data__/expected/complex.js')
 
   expect(table2array(input)).toEqual(expected)
 })

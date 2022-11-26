@@ -1,12 +1,12 @@
 export default [
   ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
   [
-    'Dream Car Garage',
-    'Dream Car Garage',
-    'Dream Car Garage',
-    'Dream Car Garage',
-    'Dream Car Garage',
-    'The Appraisers',
-    'Tech Garage'
+    '8:00 - 17:00',
+    '8:00 - 17:00',
+    '8:00 - 17:00',
+    '8:00 - 17:00',
+    '8:00 - 17:00',
+    '10:00 - 13:00',
+    'Closed'
   ]
 ]
