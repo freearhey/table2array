@@ -1,31 +1,20 @@
 import cheerio from 'cheerio'
 
 export function parse(html) {
-  const jsonResponse = []
-  let suffix
-
   const $ = cheerio.load(html)
 
-  let tableAsJson = []
-  const alreadySeen = {}
-
-  let trs = $('tr')
+  let tableArray = []
 
   let rowspans = []
 
-  // Fetch each row
-  trs.each(function (i, row) {
-    const rowAsJson = []
-
-    function setColumn(j, content) {
-      rowAsJson.push(content)
-    }
+  $('tr').each(function (i, row) {
+    const rowArray = []
 
     // Add content from rowspans
     rowspans.forEach((rowspan, index) => {
       if (!rowspan) return
 
-      setColumn(index, rowspan.content)
+      rowArray.push(rowspan.content)
 
       rowspan.value--
     })
@@ -33,6 +22,8 @@ export function parse(html) {
 
     const cells = $(row).find('td,th')
     cells.each((j, cell) => {
+      const $cell = $(cell)
+
       // Apply rowspans offsets
       let aux = j
       j = 0
@@ -44,17 +35,13 @@ export function parse(html) {
         }
       } while (aux)
 
-      const cheerioCell = $(cell)
-      const cheerioCellText = cheerioCell.text()
-      const cheerioCellHtml = cheerioCell.html()
-      const cheerioCellRowspan = cheerioCell.attr('rowspan')
+      const content = $cell.html().trim()
 
-      const content = cheerioCellHtml ? cheerioCellHtml.trim() : ''
-
-      setColumn(j, content)
+      rowArray.push(content)
 
       // Check rowspan
-      const value = cheerioCellRowspan ? parseInt(cheerioCellRowspan, 10) - 1 : 0
+      const cellRowspan = $cell.attr('rowspan')
+      const value = cellRowspan ? parseInt(cellRowspan, 10) - 1 : 0
       if (value > 0) nextrowspans[j] = { content, value }
     })
 
@@ -63,10 +50,10 @@ export function parse(html) {
       if (rowspan && rowspan.value === 0) rowspans[index] = null
     })
 
-    tableAsJson.push(rowAsJson)
+    tableArray.push(rowArray)
   })
 
-  return tableAsJson
+  return tableArray
 }
 
 export default {
