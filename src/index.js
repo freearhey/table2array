@@ -1,6 +1,6 @@
-import cheerio from 'cheerio'
+const cheerio = require('cheerio')
 
-export default function table2array(html) {
+module.exports = function table2array(html) {
   const $ = cheerio.load(html)
 
   let tableObject = {}

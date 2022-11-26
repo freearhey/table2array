@@ -1,19 +1,28 @@
 {
   "name": "table2array",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Converts HTML table to Javascript array",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "node_modules/.bin/jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/freearhey/table2array.git"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   },
   "keywords": ["html", "table", "parser", "array"],
   "author": "Arhey",
   "license": "MIT",
-  "dependencies": {
+  "devDependencies": {
     "@babel/core": "^7.20.2",
     "@babel/preset-env": "^7.20.2",
-    "cheerio": "^1.0.0-rc.12",
     "jest": "^29.3.1"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.12"
   },
   "jest": {
     "roots": [
