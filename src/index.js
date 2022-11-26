@@ -1,6 +1,6 @@
 import cheerio from 'cheerio'
 
-export function parse(html) {
+export default function table2array(html) {
   const $ = cheerio.load(html)
 
   let tableObject = {}
@@ -28,11 +28,5 @@ export function parse(html) {
     })
   })
 
-  const tableArray = Object.values(tableObject).map(obj => Object.values(obj))
-
-  return tableArray
-}
-
-export default {
-  parse
+  return Object.values(tableObject).map(obj => Object.values(obj))
 }
