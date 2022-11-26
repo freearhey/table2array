@@ -1,12 +1,12 @@
 {
-  "name": "table2json",
+  "name": "table2array",
   "version": "0.0.1",
-  "description": "",
+  "description": "Converts HTML table to Javascript array",
   "main": "index.js",
   "scripts": {
     "test": "node_modules/.bin/jest"
   },
-  "keywords": ["html", "table", "parser", "json"],
+  "keywords": ["html", "table", "parser", "array"],
   "author": "Arhey",
   "license": "MIT",
   "dependencies": {
