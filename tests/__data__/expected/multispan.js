@@ -1,21 +1,21 @@
 export default [
   ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
   [
-    'Dream Car Garage',
-    'Dream Car Garage',
-    'Dream Car Garage',
-    'Dream Car Garage',
-    'Dream Car Garage',
-    'Pleasure Boater',
-    'Intrepid Powerboats On the Water'
+    'Superlift Off-Road Adventures',
+    'Superlift Off-Road Adventures',
+    'Superlift Off-Road Adventures',
+    'Superlift Off-Road Adventures',
+    'Superlift Off-Road Adventures',
+    'The American Car Prospector',
+    'Dream Ridez'
   ],
   [
-    'Dream Car Garage',
-    'Dream Car Garage',
-    'Dream Car Garage',
-    'Dream Car Garage',
-    'Dream Car Garage',
-    'The Appraisers',
-    'Tech Garage'
+    'Car Files',
+    'Car Files',
+    'Car Files',
+    'Car Files',
+    'Car Files',
+    'The American Car Prospector',
+    "Sam's Garage"
   ]
 ]

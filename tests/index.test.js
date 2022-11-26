@@ -30,6 +30,13 @@ fit('parse table with colspan and rowspan', async () => {
   expect(parser.parse(input)).toEqual(expected)
 })
 
+it('parse full schedule', async () => {
+  const input = content('tests/__data__/input/schedule.html')
+  const { default: expected } = await import('./__data__/expected/schedule.js')
+
+  expect(parser.parse(input)).toEqual(expected)
+})
+
 function content(filepath) {
   return fs.readFileSync(path.resolve(filepath), {
     encoding: 'utf8'

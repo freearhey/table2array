@@ -16,7 +16,11 @@ export function parse(html) {
 
       rowArray.push(rowspan.content)
 
-      rowspan.value--
+      for (let y = 0; y < rowspan.colspan; y++) {
+        rowArray.push(rowspan.content)
+      }
+
+      rowspan.rowspan--
     })
     const nextrowspans = [...rowspans]
 
@@ -35,13 +39,8 @@ export function parse(html) {
         }
       } while (kbuf)
 
-      const content = $cell.html().trim()
+      const content = $cell.text().trim()
       rowArray.push(content)
-
-      // Check rowspan
-      let cellRowspan = $cell.attr('rowspan')
-      cellRowspan = cellRowspan ? parseInt(cellRowspan, 10) - 1 : 0
-      if (cellRowspan > 0) nextrowspans[j] = { content, value: cellRowspan }
 
       // Check colspan
       let cellColspan = $cell.attr('colspan')
@@ -49,17 +48,22 @@ export function parse(html) {
       for (let x = 0; x < cellColspan; x++) {
         rowArray.push(content)
       }
+
+      // Check rowspan
+      let cellRowspan = $cell.attr('rowspan')
+      cellRowspan = cellRowspan ? parseInt(cellRowspan, 10) - 1 : 0
+      if (cellRowspan > 0) nextrowspans[j] = { content, rowspan: cellRowspan, colspan: cellColspan }
     })
 
     rowspans = nextrowspans
     rowspans.forEach((rowspan, index) => {
-      if (rowspan && rowspan.value === 0) rowspans[index] = null
+      if (rowspan && rowspan.rowspan === 0) rowspans[index] = null
     })
-
-    // console.log(rowspans)
 
     tableArray.push(rowArray)
   })
+
+  console.log(tableArray)
 
   return tableArray
 }
