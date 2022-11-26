@@ -3,44 +3,32 @@ import cheerio from 'cheerio'
 export function parse(html) {
   const $ = cheerio.load(html)
 
-  let tableArray = []
-  let nextRow = {}
+  let tableObject = {}
 
   const rows = $('tr').toArray()
-  rows.forEach((row, i) => {
-    const rowArray = []
-
+  rows.forEach((row, rowIndex) => {
+    let cellIndex = 0
     const cells = $(row).find('td,th').toArray()
-    cells.forEach((cell, j) => {
+    cells.forEach(cell => {
       const content = $(cell).text().trim()
-
-      if (nextRow[j] && nextRow[j].rowspan > 0) {
-        rowArray.push(nextRow[j].content)
-        nextRow[j].rowspan--
-      }
-
-      rowArray.push(content)
-
-      let colspan = $(cell).attr('colspan')
-      colspan = colspan ? parseInt(colspan) - 1 : 0
-      for (let k = 0; k < colspan; k++) {
-        rowArray.push(content)
-      }
-
-      if (nextRow[j + 1] && nextRow[j + 1].rowspan > 0) {
-        for (let n = 0; n < nextRow[j + 1].colspan; n++) {
-          rowArray.push(nextRow[j + 1].content)
-        }
-        nextRow[j + 1].rowspan--
-      }
-
       let rowspan = $(cell).attr('rowspan')
-      rowspan = rowspan ? parseInt(rowspan) - 1 : 0
-      if (rowspan > 0) nextRow[j] = { content, rowspan, colspan: colspan + 1 }
-    })
+      rowspan = rowspan ? parseInt(rowspan) : 1
+      let colspan = $(cell).attr('colspan')
+      colspan = colspan ? parseInt(colspan) : 1
 
-    tableArray.push(rowArray)
+      for (let k = 0; k < colspan; k++) {
+        for (let n = 0; n < rowspan; n++) {
+          if (!tableObject[rowIndex + n]) tableObject[rowIndex + n] = {}
+          if (tableObject[rowIndex + n][cellIndex]) cellIndex++
+          tableObject[rowIndex + n][cellIndex] = content
+        }
+
+        cellIndex++
+      }
+    })
   })
+
+  const tableArray = Object.values(tableObject).map(obj => Object.values(obj))
 
   return tableArray
 }

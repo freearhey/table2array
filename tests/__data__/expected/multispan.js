@@ -9,8 +9,8 @@ export default [
     'The American Car Prospector'
   ],
   [
-    'Car Files',
-    'Car Files',
+    'Lund International Truck and Jeep Show',
+    'Hooked On Dirt',
     'Car Files',
     'Car Files',
     'Car Files',

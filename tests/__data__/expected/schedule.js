@@ -209,11 +209,12 @@ export default [
     '6:30 AM',
     'The Amazing World of Automobiles',
     'Car Guy Show; The',
-    'Hooked On Dirt',
     'The American Car Prospector',
+    'Hooked On Dirt',
+    'Flying Through Time',
     "Boats n' Bikes",
-    '6:30 AM',
-    'Flying Through Time'
+    "Trippin' on Two Wheels",
+    '6:30 AM'
   ],
   [
     '19',
@@ -224,7 +225,6 @@ export default [
     '1000cc Raw Thrill',
     'Racing Through Time',
     'Pleasure Boater',
-    "Trippin' on Two Wheels",
     'Intrepid Powerboats On the Water',
     '7:00 AM'
   ],
@@ -401,11 +401,11 @@ export default [
     '2:30 PM',
     'Lund International Truck and Jeep Show',
     'Hooked On Dirt',
-    'The Amazing World of Automobiles',
     "America's 4 X 4 Invasion",
     'Brand New Musicle Car: Yenko Camero',
     'Hot Rod Madness',
     'Pleasure Boater',
+    'The Amazing World of Automobiles',
     '2:30 PM'
   ],
   [
@@ -477,8 +477,8 @@ export default [
     'Pleasure Boater',
     'Flying Through Time',
     'My Classic Car',
-    '5:30 PM',
-    'Racing Through Time'
+    'Racing Through Time',
+    '5:30 PM'
   ],
   [
     '41',
@@ -497,11 +497,11 @@ export default [
     '6:30 PM',
     'The Amazing World of Automobiles',
     'Classic Cars',
-    'Hooked On Dirt',
     'On Two Wheels',
+    'Hooked On Dirt',
+    'Racing Through Time',
     'Men & Motors Showcase',
     'Flying Through Time',
-    'Racing Through Time',
     '6:30 PM'
   ],
   [
@@ -573,8 +573,8 @@ export default [
     'OPGI American Classics',
     'Classic Cars',
     "Sam's Garage",
-    '9:30 PM',
-    '400 Thunder Premium Races'
+    '400 Thunder Premium Races',
+    '9:30 PM'
   ],
   [
     '49',
