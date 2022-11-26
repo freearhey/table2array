@@ -41,7 +41,7 @@ export function parse(html) {
     tableArray.push(rowArray)
   })
 
-  console.log(tableArray)
+  // console.log(tableArray)
 
   return tableArray
 }
