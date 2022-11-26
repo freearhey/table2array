@@ -7,7 +7,7 @@ export default function table2array(html) {
 
   const rows = $('tr').toArray()
   rows.forEach((row, rowIndex) => {
-    let cellIndex = 0
+    let colIndex = 0
     const cells = $(row).find('td,th').toArray()
     cells.forEach(cell => {
       const content = $(cell).text().trim()
@@ -19,11 +19,12 @@ export default function table2array(html) {
       for (let k = 0; k < colspan; k++) {
         for (let n = 0; n < rowspan; n++) {
           if (!tableObject[rowIndex + n]) tableObject[rowIndex + n] = {}
-          if (tableObject[rowIndex + n][cellIndex]) cellIndex++
-          tableObject[rowIndex + n][cellIndex] = content
+          while (tableObject[rowIndex + n][colIndex]) colIndex++
+
+          tableObject[rowIndex + n][colIndex] = content
         }
 
-        cellIndex++
+        colIndex++
       }
     })
   })
