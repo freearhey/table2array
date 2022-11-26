@@ -1,5 +1,5 @@
 export default [
   ['Name', 'Age'],
-  ['Sue', '15'],
-  ['Steve', '12']
+  ['Chester', '41'],
+  ['Steve', '56']
 ]

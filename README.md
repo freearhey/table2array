@@ -22,12 +22,12 @@ const table = `<table>
   </thead>
   <tbody>
     <tr>
-      <td>Sue</td>
-      <td>15</td>
+      <td>Chester</td>
+      <td>41</td>
     </tr>
     <tr>
       <td>Steve</td>
-      <td>12</td>
+      <td>56</td>
     </tr>
   </tbody>
 </table>`
@@ -42,8 +42,8 @@ Output:
 ```json
 [
   ["Name", "Age"],
-  ["Sue", "15"],
-  ["Steve", "12"]
+  ["Chester", "41"],
+  ["Steve", "56"]
 ]
 ```
 
