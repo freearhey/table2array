@@ -1,6 +1,6 @@
 export default [
-  ['Parent', 'Child', 'Age'],
-  ['Marry', 'Sue', '15'],
-  ['Marry', 'Steve', '12'],
-  ['Marry', 'Tom', '3']
+  ['Name', 'Age'],
+  ['Sue', '15'],
+  ['Steve', '12'],
+  ['Tom', '3']
 ]
