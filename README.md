@@ -32,7 +32,7 @@ const table = `<table>
   </tbody>
 </table>`
 
-const array = table2array(playlist)
+const array = table2array(table)
 
 console.log(array)
 ```
